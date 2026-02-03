@@ -10,11 +10,19 @@ return{
   opts = {
     -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
     animation = true,
+    mode = "tabs",
     insert_at_start = true,
-    
+    maximum_padding = 1,
+    separator_style = "slant",
+    show_close_icon = false,
+    show_buffer_close_icons = false,
+
     icons = {
-      preset = 'powerline',
-      separator = {left = '▎', right =' '},
+      preset = 'default',
+      buffer_index = true,
+      filetype = {
+        enabled = false
+      },
     },
     -- …etc.
     --

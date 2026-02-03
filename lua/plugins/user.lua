@@ -10,6 +10,12 @@ return {
 
   {
     "folke/tokyonight.nvim",
+    transparent = true,
+    dim_inactive = false,
+    styles = {
+    sidebars = "transparent", -- This MUST be set to transparent
+    floats = "dark",          -- This keeps your popups solid as you wanted
+    },
     lazy = false,
     priority = 1000,
     opts = {},

@@ -9,6 +9,7 @@ if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 ---@type LazySpec
 return {
   "AstroNvim/astrocore",
+  
   ---@type AstroCoreOpts
   opts = {
     -- Configure core features of AstroNvim
@@ -19,6 +20,8 @@ return {
       diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
+      tabline = false
+
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
@@ -41,6 +44,9 @@ return {
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
+        fillchars = "eob: ,vsplit:|",
+        showtabline = 2,
+        laststatus = 3,
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
