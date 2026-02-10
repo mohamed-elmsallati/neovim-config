@@ -12,7 +12,21 @@ if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
 end
 
 vim.opt.rtp:prepend(lazypath)
-
+vim.opt.clipboard = "unnamedplus"
+if vim.fn.has('linux') == 1 then
+    vim.g.clipboard = {
+        name = 'xsel_copyq',
+        copy = {
+            ['+'] = 'copyq add -',
+            ['*'] = 'copyq add -',
+        },
+        paste = {
+            ['+'] = 'copyq read 0',
+            ['*'] = 'copyq read 0',
+        },
+        cache_enabled = 1,
+    }
+end
 -- validate that lazy is available
 if not pcall(require, "lazy") then
   -- stylua: ignore
