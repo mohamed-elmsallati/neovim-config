@@ -13,16 +13,16 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 vim.opt.clipboard = "unnamedplus"
-if vim.fn.has('linux') == 1 then
+if vim.fn.has('wayland') == 1 then
     vim.g.clipboard = {
-        name = 'xsel_copyq',
+        name = 'wl-clipboard',
         copy = {
-            ['+'] = 'copyq add -',
-            ['*'] = 'copyq add -',
+            ['+'] = 'wl-copy',
+            ['*'] = 'wl-copy',
         },
         paste = {
-            ['+'] = 'copyq read 0',
-            ['*'] = 'copyq read 0',
+            ['+'] = 'wl-paste',
+            ['*'] = 'wl-paste',
         },
         cache_enabled = 1,
     }
