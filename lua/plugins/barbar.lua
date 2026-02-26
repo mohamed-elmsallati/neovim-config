@@ -21,7 +21,7 @@ return{
       preset = 'default',
       buffer_index = true,
       filetype = {
-        enabled = false
+        enabled = true
       },
     },
     -- …etc.

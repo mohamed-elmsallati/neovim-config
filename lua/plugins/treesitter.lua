@@ -10,9 +10,5 @@ return {
       -- add more arguments for adding more treesitter parsers
     },
     event = { "BufReadPre" },
-    autotag = {
-      enable = true,
-      enable_rename = true,
-    },
   },
 }

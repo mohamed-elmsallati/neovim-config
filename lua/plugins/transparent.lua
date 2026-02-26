@@ -11,7 +11,6 @@ return {
     extra_groups = {
 
       "NeoTreeNormal", "NeoTreeNormalNC", "NeoTreeWinSeparator",
-      
       -- Barbar (The tabs at the top)
       "BufferCurrent", "BufferCurrentIndex", "BufferCurrentMod", "BufferCurrentSign", "BufferCurrentTarget",
       "BufferInactive", "BufferInactiveIndex", "BufferInactiveMod", "BufferInactiveSign", "BufferInactiveTarget",
@@ -21,9 +20,9 @@ return {
 
       -- Lualine (The status bar at the bottom)
       "lualine_a_normal", "lualine_b_normal", "lualine_c_normal",
-      "WinSeparator", 
+      "WinSeparator",
       'Folded',
-      "VertSplit", 
+      "VertSplit",
       "FoldColumn",
       "EndOfBuffer",
       "HeirlineStatusLine",
